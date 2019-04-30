@@ -30,7 +30,7 @@ spec:
           {{- end }}
           imagePullPolicy: "{{ .Values.image.pullPolicy }}"
           args:
-            - --host-interface={{ .Values.host.interface }};;
+            - --host-interface={{ .Values.host.interface }};;;;;
             - --node=$(NODE_NAME)
           {{- if .Values.host.iptables }}
             - --host-ip={{ .Values.host.ip }}
